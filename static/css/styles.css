@@ -43,6 +43,10 @@ hr {
   margin-bottom: 2rem;
   font-size: 2.7rem;
 }
+.dark-text {
+  color: #303030;
+  font-weight: 400;
+}
 
 .light-heading {
   color: #FEFEFE;
@@ -64,6 +68,9 @@ hr {
     background-color: rgba(207, 192, 192, 0.30);
 }
 
+.link-secondary {
+    color: #303030;
+}
 .main-text {
   font-size: 1.5rem;
   line-height: 1.5;
@@ -90,9 +97,6 @@ hr {
     padding: 0px 18px;
 }
 
-.link-secondary {
-    color: #303030;
-}
 
 /* Navigation Bar */
 
@@ -124,7 +128,7 @@ hr {
     }
 
 .nav-item {
-  padding: 0px 18px;
+  padding: 7px 18px;
 }
 
 .nav-link {
@@ -175,6 +179,17 @@ hr {
 .lorem {
   margin: 0% 20% 0% 20%;
 }
+
+/*Links*/
+
+#linklearnmore {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+  font-size: 0.8rem;
+  color: #737373;
+}
+
+
 
 /* Project Cards - Features */
 

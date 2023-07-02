@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import os
 import smtplib
 
@@ -17,6 +17,19 @@ def send_email(name, email, phone, message):
         connection.starttls()
         connection.login(OWN_EMAIL, OWN_PASSWORD)
         connection.sendmail(OWN_EMAIL, OWN_EMAIL, email_message)
+
+@app.route("/contact", methods=["GET", "POST"])
+def contact():
+    if request.method == "POST":
+        data = request.form
+        send_email(data["name"], data["email"], data["phone"], data["message"])
+        return render_template("contact.html", msg_sent=True)
+    return render_template("contact.html", msg_sent=False)
+
+@app.route("/aboutme", methods=["GET", "POST"])
+def aboutme():
+    return render_template('aboutme.html')
+
 
 if __name__ == "__main__":
     app.run(debug=True)
