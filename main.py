@@ -2,8 +2,11 @@ from flask import Flask, render_template, request
 import os
 import smtplib
 
-OWN_EMAIL = os.environ.get("EMAIL")
-OWN_PASSWORD = os.environ.get("PASSWORD")
+# OWN_EMAIL = os.environ.get("EMAIL")
+# OWN_PASSWORD = os.environ.get("PASSWORD")
+OWN_EMAIL = os.getenv("EMAIL")
+OWN_PASSWORD = os.getenv("PASSWORD")
+
 app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
